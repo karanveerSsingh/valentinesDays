@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: valentinesDays
-    env: node
-    repo: https://github.com/karanveerSsingh/valentinesDays.git
-    branch: main
+    name: valentine-days
+    runtime: node
     buildCommand: npm install && npm run build
     startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
