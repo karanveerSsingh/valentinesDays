@@ -9,9 +9,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "engines": {
-  "node": "18.x"
+"engines": {
+  "node": ">=20"
 },
+
 
   "prettier": {
     "printWidth": 100,
