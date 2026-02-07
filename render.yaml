@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: valentinesDays
+    env: static
+    repo: https://github.com/karanveerSsingh/valentinesDays.git
+    branch: main
+    buildCommand: npm run build
+    staticPublishPath: dist/valentineDays
