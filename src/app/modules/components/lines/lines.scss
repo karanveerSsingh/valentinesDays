@@ -1,0 +1,96 @@
+.love-wrapper {
+  position: relative;
+  height: 100vh;
+  //   background: linear-gradient(135deg, #ffd6e0, #ffeef3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.love-card {
+  width: 60%;
+  background: white;
+  padding: 40px 50px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.8;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+  color: #b3003b;
+}
+
+/* Roses common style */
+.rose {
+  position: absolute;
+  width: 80px;
+  opacity: 0.9;
+}
+
+/* Left side roses */
+.rose-left {
+  left: -100px;
+  animation: float-left-to-right 8s linear infinite;
+}
+
+/* Right side roses */
+.rose-right {
+  right: -100px;
+  animation: float-right-to-left 8s linear infinite;
+}
+
+/* Different positions */
+.r1 {
+  top: 10%;
+  animation-delay: 0s;
+}
+.r2 {
+  top: 60%;
+  animation-delay: 2s;
+}
+.r3 {
+  top: 30%;
+  animation-delay: 1s;
+}
+.r4 {
+  top: 75%;
+  animation-delay: 3s;
+}
+
+/* Animation */
+@keyframes float-left-to-right {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50vw) rotate(180deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(360deg);
+  }
+}
+@keyframes float-right-to-left {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50vw) rotate(-180deg);
+  }
+  100% {
+    transform: translateX(-100vw) rotate(-360deg);
+  }
+}
+@media (width <= 576px) {
+  .love-wrapper {
+    padding-top: 70%;
+  }
+}
+@media (width <= 576px) {
+  .love-wrapper {
+    .love-card {
+      font-size: 15px;
+    }
+  }
+}

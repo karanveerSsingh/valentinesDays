@@ -1,0 +1,81 @@
+.valentine-container {
+  background-color: #ffffff;
+  padding: 40px 100px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  margin-bottom: 300px;
+  margin-top: 200px;
+  .title {
+    color: #b92254;
+    .hey {
+      font-size: 36px;
+      font-family: 'Eagle Lake', serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .rose {
+      font-size: 48px;
+      font-family: 'Eagle Lake', serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+  .imgs {
+    .top-img {
+      width: 200px;
+    }
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fly {
+  0%,
+  100% {
+    transform: rotate(-15deg) translateX(0);
+  }
+  50% {
+    transform: rotate(-15deg) translateX(20px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+/* Responsive Styles */
+@media (width <= 576px) {
+  .valentine-container {
+    margin-top: 400px;
+    margin-bottom: 400px;
+
+    padding: 20px;
+    .title {
+      .hey {
+        font-size: 16px;
+      }
+      .rose {
+        font-size: 24px;
+      }
+    }
+    .imgs {
+      .top-img {
+        width: 100px;
+      }
+    }
+  }
+}

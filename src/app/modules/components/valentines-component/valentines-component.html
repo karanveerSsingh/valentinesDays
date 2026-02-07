@@ -1,0 +1,34 @@
+<div class="valentine-container" #container>
+  @if (showScheme()) {
+    @if (!isYesClicked) {
+      <div class="card animate__animated animate__fadeIn" #card>
+        <p class="lover_name">Arpita</p>
+        <div class="d-flex align-items-center content">
+          <div class="details">
+            <p>will you be my Valentine?</p>
+          </div>
+          <div class="animi">
+            <p class="animate__animated animate__heartBeat animate__infinite">❤️</p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="yes-btn" (click)="playSound()" [class.full-width]="isLastNoMessage">
+            YES
+          </button>
+          @if (!isLastNoMessage) {
+            <button #noBtn class="no-btn" (click)="changeNoText()">{{ noButtonText }}</button>
+          }
+        </div>
+      </div>
+    } @else {
+      <div class="second-cards" (scroll)="onScroll($event)">
+        <app-cele-happy></app-cele-happy>
+        <!-- <div class="dashed-line"></div> -->
+        <app-lines></app-lines>
+        <app-rose-day></app-rose-day>
+        <div class="scroll-down-arrow" [class.hidden]="!showArrow"></div>
+      </div>
+    }
+  }
+</div>
