@@ -4,8 +4,5 @@ services:
     env: node
     repo: https://github.com/karanveerSsingh/valentinesDays.git
     branch: main
-    buildCommand: npm run build
+    buildCommand: npm install && npm run build
     startCommand: node server.js
-    envVars:
-      - key: PORT
-        value: 3000
