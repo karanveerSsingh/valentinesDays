@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, signal, ViewChild } from '@angular/core';
-import 'animate.css';
 import { CeleHappy } from '../cele-happy/cele-happy';
 import { Lines } from '../lines/lines';
 import { RoseDay } from '../rose-day/rose-day';
